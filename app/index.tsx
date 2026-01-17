@@ -30,13 +30,13 @@ export default function Home(){
     
     return(
         <View style={myStyles.container}>
-            <Text>Fruit : {fruit} </Text>
+            <Text style={{marginBottom:10,fontSize:20}} >Fruit 🍊 : {fruit} </Text>
             <TextInput style={myStyles.input} value={text} onChangeText={setText} />
-            <TouchableOpacity onPress={saveFruit}>
-                <Text> Save </Text>
+            <TouchableOpacity onPress={saveFruit} style={{backgroundColor:"white", padding:20, marginTop:10, borderRadius:20}}>
+                <Text> Save 📁 </Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={removeFruit}>
-                <Text> Delete </Text>
+            <TouchableOpacity onPress={removeFruit} style={{backgroundColor:"white", padding:20, marginTop:10, borderRadius:20}}>
+                <Text> Delete 🗑️ </Text>
             </TouchableOpacity>
         </View>
     )
@@ -44,6 +44,7 @@ export default function Home(){
 
 const myStyles = StyleSheet.create({
   container:{
+    backgroundColor:"pink",
     flex:1,
     justifyContent:"center",
     alignItems:"center"
